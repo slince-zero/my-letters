@@ -3,7 +3,6 @@ import { useRef, useEffect } from 'react'
 import { Mail, X } from 'lucide-react'
 import Image from 'next/image'
 import type { Testimonial } from '@/type/type'
-
 const Testimonial = ({ avatar, content, author }: Testimonial) => (
   <div className='bg-white shadow-lg rounded-lg p-4 flex flex-col h-full w-[280px] md:w-[320px] flex-shrink-0 mx-2'>
     <div className='flex items-start mb-2'>
@@ -56,20 +55,33 @@ const TestimonialRow = ({ testimonials }: { testimonials: Testimonial[] }) => {
   )
 }
 
-const LetterApp = () => {
-  useEffect(() => {
-    const fetchUserInfo = async () => {
-      try {
-        const response = await fetch('https://randomuser.me/api/?results=20')
-        const data = await response.json()
-        console.log(data, '111')
-      } catch (error) {
-        console.log('ERROR fetching data', error)
-      }
-    }
+export async function getStaticProps() {
+  try {
+    const response = await fetch('https://randomuser.me/api/?results=20')
+    const data = await response.json()
+    return data
+  } catch (error) {
+    console.log('ERROR fetching data', error)
+  }
+}
+const LetterApp = ({ data }) => {
+  console.log(data, '33333')
 
-    fetchUserInfo()
-  }, [])
+  // getStaticProps ，静态生成
+  // useEffect(() => {
+  //   const fetchUserInfo = async () => {
+  //     try {
+  //       const response = await fetch('https://randomuser.me/api/?results=20')
+  //       const data = await response.json()
+
+  //     } catch (error) {
+  //       console.log('ERROR fetching data', error)
+  //     }
+  //   }
+
+  //   fetchUserInfo()
+  // }, [])
+
   const testimonials = [
     {
       id: 1,
