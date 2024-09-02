@@ -55,17 +55,17 @@ const TestimonialRow = ({ testimonials }: { testimonials: Testimonial[] }) => {
   )
 }
 
-export async function getStaticProps() {
-  try {
-    const response = await fetch('https://randomuser.me/api/?results=20')
-    const data = await response.json()
-    return data
-  } catch (error) {
-    console.log('ERROR fetching data', error)
-  }
-}
-const LetterApp = ({ data }) => {
-  console.log(data, '33333')
+// export async function getStaticProps() {
+//   try {
+//     const response = await fetch('https://randomuser.me/api/?results=20')
+//     const data = await response.json()
+//     return data
+//   } catch (error) {
+//     console.log('ERROR fetching data', error)
+//   }
+// }
+const LetterApp = () => {
+  // console.log(data, '33333')
 
   // getStaticProps ，静态生成
   // useEffect(() => {
