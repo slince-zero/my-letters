@@ -1,20 +1,18 @@
 'use client'
 import { useRef, useEffect } from 'react'
 import { Mail, X } from 'lucide-react'
-
-type Testimonial = {
-  avatar: string
-  content: string
-  author: string
-}
+import Image from 'next/image'
+import type { Testimonial } from '@/type/type'
 
 const Testimonial = ({ avatar, content, author }: Testimonial) => (
   <div className='bg-white shadow-lg rounded-lg p-4 flex flex-col h-full w-[280px] md:w-[320px] flex-shrink-0 mx-2'>
     <div className='flex items-start mb-2'>
-      <img
+      <Image
         src={avatar}
         alt={author}
-        className='w-10 h-10 rounded-full mr-3'
+        width={40}
+        height={40}
+        className='rounded-full mr-3'
       />
       <div className='flex-grow'>
         <p className='text-gray-600 text-sm line-clamp-3'>{content}</p>
@@ -59,6 +57,19 @@ const TestimonialRow = ({ testimonials }: { testimonials: Testimonial[] }) => {
 }
 
 const LetterApp = () => {
+  useEffect(() => {
+    const fetchUserInfo = async () => {
+      try {
+        const response = await fetch('https://randomuser.me/api/?results=20')
+        const data = await response.json()
+        console.log(data, '111')
+      } catch (error) {
+        console.log('ERROR fetching data', error)
+      }
+    }
+
+    fetchUserInfo()
+  }, [])
   const testimonials = [
     {
       id: 1,
@@ -95,7 +106,27 @@ const LetterApp = () => {
         'I love how this app combines the nostalgia of letter writing with modern convenience. It is a perfect blend of old and new.',
       author: 'Emma Brown',
     },
-    // Add more testimonials to reach 10 total
+    {
+      id: 6,
+      avatar: '/api/placeholder/100',
+      content:
+        'I love how this app combines the nostalgia of letter writing with modern convenience. It is a perfect blend of old and new.',
+      author: 'Emma Brown',
+    },
+    {
+      id: 7,
+      avatar: '/api/placeholder/100',
+      content:
+        'I love how this app combines the nostalgia of letter writing with modern convenience. It is a perfect blend of old and new.',
+      author: 'Emma Brown',
+    },
+    {
+      id: 8,
+      avatar: '/api/placeholder/100',
+      content:
+        'I love how this app combines the nostalgia of letter writing with modern convenience. It is a perfect blend of old and new.',
+      author: 'Emma Brown',
+    },
   ]
 
   return (
