@@ -1,16 +1,7 @@
 import { Mail, X } from 'lucide-react'
 import TestimonialRow from './TsetimonialRow'
-export default function LetterApp() {
-  const fetchUserInfo = async () => {
-    try {
-      const response = await fetch('https://randomuser.me/api/?results=20')
-      const data = await response.json()
-    } catch (error) {
-      console.log('ERROR fetching data', error)
-    }
-  }
-
-  fetchUserInfo()
+export default async function LetterApp() {
+  
 
   const testimonials = [
     {

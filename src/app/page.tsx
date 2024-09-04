@@ -1,4 +1,3 @@
-'use client'
 import LetterAppComponent from '@/components/Letter'
 
 const LetterApp = () => {
