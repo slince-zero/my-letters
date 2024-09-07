@@ -1,64 +1,146 @@
 import { Mail, X } from 'lucide-react'
 import TestimonialRow from './TsetimonialRow'
 export default async function LetterApp() {
-  
-
   const testimonials = [
     {
       id: 1,
-      avatar: '/api/placeholder/100',
+      avatar: '/avatar/01.jpg',
       content:
-        'This app revolutionized how I stay in touch with my loved ones. The personal touch of a letter in this digital age is refreshing!',
+        'This app revolutionized how I stay in touch with my loved ones. The personal touch of a letter in this digital age is truly refreshing!',
       author: 'John Doe',
     },
     {
       id: 2,
-      avatar: '/api/placeholder/100',
+      avatar: '/avatar/02.jpg',
       content:
-        "I've reconnected with old friends thanks to this platform. It's user-friendly and brings back the joy of written communication.",
+        "I've reconnected with old friends thanks to this platform. It's simple to use and reminds me of the joy of handwritten letters.",
       author: 'Jane Smith',
     },
     {
       id: 3,
-      avatar: '/api/placeholder/100',
+      avatar: '/avatar/03.jpg',
       content:
-        "As someone who values meaningful connections, this app is a gem. It allows me to express myself in ways that texts or emails can't match.",
+        "This app allows me to express myself in a way that text messages can't. It brings back the warmth of meaningful communication.",
       author: 'Alice Johnson',
     },
     {
       id: 4,
-      avatar: '/api/placeholder/100',
+      avatar: '/avatar/04.jpg',
       content:
-        'The anticipation of receiving a letter is unmatched. This app has made that experience accessible and exciting again!',
+        'The anticipation of receiving a letter is an unmatched experience. This app makes it easy and exciting again!',
       author: 'Bob Williams',
     },
     {
       id: 5,
-      avatar: '/api/placeholder/100',
+      avatar: '/avatar/05.jpg',
       content:
-        'I love how this app combines the nostalgia of letter writing with modern convenience. It is a perfect blend of old and new.',
+        'I appreciate the way this app combines the charm of letter writing with modern technology. It creates a perfect balance between tradition and convenience.',
       author: 'Emma Brown',
     },
     {
       id: 6,
-      avatar: '/api/placeholder/100',
+      avatar: '/avatar/06.jpg',
       content:
-        'I love how this app combines the nostalgia of letter writing with modern convenience. It is a perfect blend of old and new.',
-      author: 'Emma Brown',
+        'Using this app feels like stepping back in time, but with all the benefits of modern technology. It’s an incredible experience!',
+      author: 'Norman Lowe',
     },
     {
       id: 7,
-      avatar: '/api/placeholder/100',
+      avatar: '/avatar/07.jpg',
       content:
-        'I love how this app combines the nostalgia of letter writing with modern convenience. It is a perfect blend of old and new.',
-      author: 'Emma Brown',
+        'The simplicity and elegance of this app make reconnecting with loved ones effortless. It brings a personal touch back to communication.',
+      author: 'Sonja Tønnessen',
     },
     {
       id: 8,
-      avatar: '/api/placeholder/100',
+      avatar: '/avatar/08.jpg',
       content:
-        'I love how this app combines the nostalgia of letter writing with modern convenience. It is a perfect blend of old and new.',
-      author: 'Emma Brown',
+        'With this app, I can easily send thoughtful messages that feel much more personal than an email or text.',
+      author: 'Magda Leuschner',
+    },
+    {
+      id: 9,
+      avatar: '/avatar/09.jpg',
+      content:
+        'Every message feels more special and genuine with this app. It has rekindled my love for written communication.',
+      author: 'Thale Lunden',
+    },
+    {
+      id: 10,
+      avatar: '/avatar/10.jpg',
+      content:
+        'This app has reinvented how I communicate with those I care about. It’s a delightful blend of the old and the new.',
+      author: 'Sérgio Picard',
+    },
+    {
+      id: 11,
+      avatar: '/avatar/11.jpg',
+      content:
+        'Receiving letters through this app has become a highlight of my week. It feels so special every time.',
+      author: 'Rosalyn Bradley',
+    },
+    {
+      id: 12,
+      avatar: '/avatar/12.jpg',
+      content:
+        'This app offers a refreshing change from digital overload. It brings back the art of letter writing in a beautiful way.',
+      author: 'Manon Perrin',
+    },
+    {
+      id: 13,
+      avatar: '/avatar/13.jpg',
+      content:
+        'I never realized how much I missed letters until I started using this app. It’s been a wonderful experience!',
+      author: 'Brandon Gonzalez',
+    },
+    {
+      id: 14,
+      avatar: '/avatar/14.jpg',
+      content:
+        'This app reminds me of the joy in receiving and sending personal messages. It’s more intimate than any other form of communication.',
+      author: 'Ryan Spijkerman',
+    },
+    {
+      id: 15,
+      avatar: '/avatar/15.jpg',
+      content:
+        'The nostalgic feel of this app, paired with its ease of use, makes it one of my favorite platforms.',
+      author: 'Aymane Van Heteren',
+    },
+    {
+      id: 16,
+      avatar: '/avatar/16.jpg',
+      content:
+        'It’s wonderful to share thoughtful messages again. This app makes letter writing convenient and enjoyable.',
+      author: 'Carl Kristensen',
+    },
+    {
+      id: 17,
+      avatar: '/avatar/17.jpg',
+      content:
+        'This app brings a personal and meaningful way to stay connected with my family and friends. I love it!',
+      author: 'Nenad RatkovićRistić',
+    },
+    {
+      id: 18,
+      avatar: '/avatar/18.jpg',
+      content:
+        'I appreciate how this app has brought back the art of letter writing in such an accessible and modern way.',
+      author: 'Raul Sutton',
+    },
+    {
+      id: 19,
+      avatar: '/avatar/19.jpg',
+      content:
+        'This app is a perfect way to send thoughtful messages that feel more personal than a text or email.',
+      author: 'Jeanette Cruz',
+    },
+    {
+      id: 20,
+      avatar: '/avatar/20.jpg',
+      content:
+        'I adore how this app captures the spirit of old-fashioned letter writing while being convenient to use.',
+      author: 'Sherwin Broens',
     },
   ]
 
